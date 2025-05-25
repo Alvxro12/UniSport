@@ -2,14 +2,17 @@ import WhyUniSport from "../components/why_unisport";
 import Afiliados from "../components/screen_afiliados";
 import CTAFinal from "../components/cta_landing";
 import Footer from "../components/footer";
+import Imagen from "../components/imagenes";
+import herosection_reserva from "../assets/images/herosection_reserva.png"
+
 
 function Landing() {
 return (
     <>
 <section className="relative flex flex-col-reverse sm:flex-row items-center justify-between px-6 sm:px-16 py-16 bg-overflow-hidden">
     {/* Imagen deportiva con fondo transparente */}
-    <img
-    src="/src/assets/images/herosection_reserva.png"
+    <Imagen
+    src={herosection_reserva}
     alt="Imagen de una persona reservando un lugar de deportes"
     className="w-[280px] sm:w-[420px] flex"
     />

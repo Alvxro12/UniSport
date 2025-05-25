@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerMenu from './boton_mobile';
 import Footer from './footer';
+import Imagen from './imagenes';
+import Logo_unisport from '../assets/images/logo_unisport_white.png'
 
 function Navbar() {
 const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +14,7 @@ return (
     <nav className="flex items-center justify-between">
 
     <Link to="/">
-        <img src="/src/assets/images/logo_unisport_white.png" alt="UniSport" className="h-30 sm:h-40" />
+        <Imagen src={Logo_unisport} alt="UniSport" className="h-30 sm:h-40" />
     </Link>
 
     {/* Menú desktop */}

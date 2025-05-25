@@ -1,25 +1,24 @@
-
 function Afiliados() {
 const afiliados = [
 {
     nombre: 'Universidad X',
-    logo: '/src/assets/images/Logo_cuc.png',
+    logo: '/UniSport/Logo_cuc.png',
 },
 {
     nombre: 'Club Deportivo A',
-    logo: '/src/assets/images/Unisimon_logo_25.png',
+    logo: '/UniSport/Unisimon_logo_25.png',
 },
 {
     nombre: 'Centro Atlética B',
-    logo: '/src/assets/images/logo-uninorte.png',
+    logo: '/UniSport/logo-uninorte.png',
 },
 {
     nombre: 'Escuela C',
-    logo: '/src/assets/images/Logo_de_la_Universidad_del_Atlántico.svg.png',
+    logo: '/UniSport/Logo_de_la_Universidad_del_Atlántico.svg.png',
 },
 {
     nombre: 'Academia D',
-    logo: '/src/assets/images/logo-unilibre.png',
+    logo: '/UniSport/logo-unilibre.png',
 },
 ];
 

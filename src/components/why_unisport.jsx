@@ -3,17 +3,17 @@ const cards = [
 {
     title: 'Reservas rápidas',
     description: 'Gestiona tus espacios deportivos en segundos desde tu celular.',
-    icon: '/src/assets/images/reserva_clara.png',
+    icon: '/UniSport/reserva_clara.png',
 },
 {
     title: 'Información clara',
     description: 'Consulta disponibilidad, horarios y detalles sin perder tiempo.',
-    icon: '/src/assets/images/agenda_clara.png',
+    icon: '/UniSport/agenda_clara.png',
 },
 {
     title: 'Pensado para estudiantes',
     description: 'Hecho para ti: intuitivo, práctico y completamente gratuito.',
-    icon: '/src/assets/images/comunidad_clara.png',
+    icon: '/UniSport/comunidad_clara.png',
 },
 ];
 
