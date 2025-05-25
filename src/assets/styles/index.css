@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "../Fonts/font.css";
+
+body{
+    font-family: 'Lora';
+    font-size: 18px;
+    font-weight: 400;
+    @apply bg-gradient-to-b from-[#222222] to-[#342022] min-h-screen text-white;
+}
