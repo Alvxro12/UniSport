@@ -5,12 +5,13 @@ import Landing from './pages/screen_landing.jsx';
 //import Reservas from './pages/Reservas.jsx';
 //import Login from './pages/Login.jsx';
 
+
 function App() {
   return (
-    <Router>
-      <Navbar/>
+    <Router basename="/UniSport">
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Landing/>} />
+        <Route path="/" element={<Landing />} />
         {/*<Route path="/instalaciones" element={<Instalaciones />} /> */}
         {/*<Route path="/reservas" element={<Reservas />} /> */}
         {/*<Route path="/login" element={<Login />} />*/}
