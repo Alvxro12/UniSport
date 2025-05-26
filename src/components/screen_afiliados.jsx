@@ -1,26 +1,29 @@
 function Afiliados() {
+const base = import.meta.env.BASE_URL;
+
 const afiliados = [
 {
-    nombre: 'Universidad X',
-    logo: '/UniSport/Logo_cuc.png',
+    nombre: 'Universidad de la costa',
+    logo: `${base}Logo_cuc.png`,
 },
 {
-    nombre: 'Club Deportivo A',
-    logo: '/UniSport/Unisimon_logo_25.png',
+    nombre: 'Universidad Simon Bolivar',
+    logo: `${base}Unisimon_logo_25.png`,
 },
 {
-    nombre: 'Centro Atlética B',
-    logo: '/UniSport/logo-uninorte.png',
+    nombre: 'Universidad del norte',
+    logo: `${base}logo-uninorte.png`,
 },
 {
-    nombre: 'Escuela C',
-    logo: '/UniSport/Logo_de_la_Universidad_del_Atlántico.svg.png',
+    nombre: 'Universidad del atlantico',
+    logo: `${base}Logo_de_la_Universidad_del_Atlántico.svg.png`,
 },
 {
-    nombre: 'Academia D',
-    logo: '/UniSport/logo-unilibre.png',
+    nombre: 'Universidad Libre',
+    logo: `${base}logo-unilibre.png`,
 },
 ];
+
 
 return (
 <section className="bg-transparent py-20 sm:py-28">

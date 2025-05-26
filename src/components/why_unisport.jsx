@@ -1,19 +1,20 @@
 function WhyUniSport() {
+const base = import.meta.env.BASE_URL;
 const cards = [
 {
     title: 'Reservas rápidas',
     description: 'Gestiona tus espacios deportivos en segundos desde tu celular.',
-    icon: '/UniSport/reserva_clara.png',
+    icon: `${base}reserva_clara.png`,
 },
 {
     title: 'Información clara',
     description: 'Consulta disponibilidad, horarios y detalles sin perder tiempo.',
-    icon: '/UniSport/agenda_clara.png',
+    icon: `${base}agenda_clara.png`,
 },
 {
     title: 'Pensado para estudiantes',
     description: 'Hecho para ti: intuitivo, práctico y completamente gratuito.',
-    icon: '/UniSport/comunidad_clara.png',
+    icon: `${base}comunidad_clara.png`,
 },
 ];
 

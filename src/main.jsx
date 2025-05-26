@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx'; 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename="/UniSport">
+  <BrowserRouter basename={import.meta.env.MODE === 'production' ? '/UniSport' : '/'}>
     <App />
   </BrowserRouter>
 );
