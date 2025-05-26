@@ -22,13 +22,12 @@ style={{ backgroundImage: "url('/UniSport/background_login2.png')" }}
         className="w-full px-4 py-2 border focus:border-[#AE0F28] focus:outline-none border-gray-300  rounded-lg mb-4 text-black"
     />
 
-    <button className="w-full bg-[#AE0F28] text-white py-2 rounded-full hover: cursor-pointer mb-4">
-        Continuar
-    </button>
+            <button className="w-full bg-[#AE0F28] text-white py-2 rounded-full hover: cursor-pointer mb-4"><Link to="/instalaciones">Continuar</Link>
+        </button>
 
 <h2 className="text-black text-center text-sm">
     ¿No tienes cuenta?{" "}
-    <Link to="/register" className="text-[#AE0F28] underline hover:text-[#8e0c20]">
+    <Link to="/Register" className="text-[#AE0F28] underline hover:text-[#8e0c20]">
     ¡Regístrate aquí!
     </Link>
 </h2>
