@@ -4,9 +4,20 @@ import CTAFinal from "../components/cta_landing";
 import Footer from "../components/footer";
 import Imagen from "../components/imagenes";
 import herosection_reserva from "../assets/images/herosection_reserva.png"
-
+import { useNavigate } from "react-router-dom";
+import { auth } from "../services/firebase";
 
 function Landing() {
+    const navigate = useNavigate();
+    const irAInstalaciones = () => {
+    if (auth.currentUser) {
+        navigate("/instalaciones");
+    } else {
+        navigate("/login");
+    }
+};
+
+
 return (
     <>
 <section className="relative flex flex-col-reverse sm:flex-row items-center justify-between px-6 sm:px-16 py-16 bg-overflow-hidden">
@@ -26,11 +37,11 @@ return (
         Eleva tu juego reservando las mejores instalaciones de primer nivel, planea tus entrenamientos y triunfa en el mundo deportivo.
     </p>
     <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
-    <button className="bg-[#AE0F28] text-white px-6 py-3 rounded-md cursor-pointer border border-white font-semibold transition active:scale-95 sm:hover:bg-transparent sm:hover:text-white sm:hover:scale-105">
+    <button onClick={irAInstalaciones} className="bg-[#AE0F28] text-white px-6 py-3 rounded-md cursor-pointer border border-white font-semibold transition active:scale-95 sm:hover:bg-transparent sm:hover:text-white sm:hover:scale-105">
     ¡Reserva ahora!
     </button>
 
-        <button className="bg-[#F5E9D8] cursor-pointer border border-white text-[#AE0F28] px-6 py-3 rounded-md font-medium hover:bg-white-200">
+        <button onClick={irAInstalaciones} className="bg-[#F5E9D8] cursor-pointer border border-white text-[#AE0F28] px-6 py-3 rounded-md font-medium hover:bg-white-200">
         Ver canchas disponibles.
         </button>
     </div>

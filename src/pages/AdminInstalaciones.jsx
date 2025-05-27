@@ -8,7 +8,7 @@ const [modo, setModo] = useState("crear"); // o "editar"
 const [editingId, setEditingId] = useState(null);
 const [formSala, setFormSala] = useState({
 nombre: "",
-tipo_de_sala: '',
+tipo_de_sala: "",
 descripcion: "",
 capacidad: "",
 ubicacion: "",
@@ -31,7 +31,7 @@ fetchSalas();
 const resetForm = () => {
 setFormSala({
     nombre: "",
-    tipo_de_sala: '',
+    tipo_de_sala: "",
     descripcion: "",
     capacidad: "",
     ubicacion: "",
@@ -41,6 +41,10 @@ setFormSala({
 setModo("crear");
 setEditingId(null);
 };
+
+const formatLabel = (campo) =>
+    campo
+    .replace(/_/g, " ")    
 
 const handleSubmit = async (e) => {
 e.preventDefault();
@@ -104,11 +108,11 @@ return (
     {modo === "crear" ? "Nueva instalación" : "Editar instalación"}
     </h2>
     <form onSubmit={handleSubmit} className="space-y-4">
-    {["nombre", "tipo de sala", "descripcion", "ubicacion", "capacidad", "imagen"].map((campo) => (
+    {["nombre", "tipo_de_sala", "descripcion", "ubicacion", "capacidad", "imagen"].map((campo) => (
         <input
         key={campo}
         type="text"
-        placeholder={campo.charAt(0).toUpperCase() + campo.slice(1)}
+        placeholder={formatLabel(campo.charAt(0).toUpperCase() + campo.slice(1))}
         value={formSala[campo]}
         onChange={(e) => setFormSala({ ...formSala, [campo]: e.target.value })}
         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#AE0F28]"

@@ -21,8 +21,8 @@ function InstalacionDetalle() {
     if (!sala) return <div className="p-6 text-white">Cargando instalación...</div>;
 
     return (
-        <div className="min-h-screen bg-transparent text-white">
-        {/* Hero Section */}
+        <div className="min-h-screen bg-gradient-to-b from-[#222222] to-[#342022] text-white">
+        {/* Hero */}
         {sala.imagen && (
             <div className="relative w-full h-72 sm:h-96 overflow-hidden shadow-lg">
             <img
@@ -39,24 +39,33 @@ function InstalacionDetalle() {
             </div>
         )}
 
-        {/* Detalle */}
-        <div className="max-w-3xl mx-auto p-6 mt-6 bg-[#F5E9D8] text-[#222] rounded-xl shadow-xl space-y-4">
-            <p className="text-lg">
-            <strong>Ubicación:</strong> {sala.ubicacion}
-            </p>
-            <p className="text-lg">
-            <strong>Capacidad:</strong> {sala.capacidad}
-            </p>
-            <p className="text-lg">
-            <strong>Descripción:</strong> {sala.descripcion}
-            </p>
+        {/* Información extendida */}
+        <div className="max-w-4xl mx-auto px-6 sm:px-10 py-10 space-y-6">
+            <div className="border-b border-white/10 pb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-[#F5E9D8]">Ubicación</h2>
+            <p className="text-white/80 text-lg mt-1">{sala.ubicacion}</p>
+            </div>
+
+            <div className="border-b border-white/10 pb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-[#F5E9D8]">Capacidad</h2>
+            <p className="text-white/80 text-lg mt-1">{sala.capacidad}</p>
+            </div>
+
+            <div className="border-b border-white/10 pb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-[#F5E9D8]">Descripción</h2>
+            <p className="text-white/80 text-lg mt-1">{sala.descripcion}</p>
+            </div>
+
+            <div className="pt-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-[#F5E9D8]">Estado</h2>
             <p
-            className={`text-lg font-semibold ${
-                sala.disponible ? "text-green-600" : "text-red-600"
-            }`}
+                className={`text-lg font-bold mt-1 ${
+                sala.disponible ? "text-green-400" : "text-red-400"
+                }`}
             >
-            {sala.disponible ? "Disponible" : "No disponible"}
+                {sala.disponible ? "Disponible" : "No disponible"}
             </p>
+            </div>
         </div>
         </div>
     );
