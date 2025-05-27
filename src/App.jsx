@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import AdminInstalaciones from './pages/AdminInstalaciones.jsx';
 import Navbar from './components/navbar.jsx';
 import Landing from './pages/screen_landing.jsx';
 import Login from './pages/screen_login.jsx';
 import Register from './pages/register.jsx';
 import Instalaciones from './pages/Instalaciones.jsx';
-import AdminInstalaciones from './pages/AdminInstalaciones.jsx';
 import InstalacionDetalle from './pages/InstalacionDetalle.jsx';
 import Reservas from './pages/Reservas.jsx';
 import { doc, getDoc } from "firebase/firestore";

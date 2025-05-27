@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
 import { db, auth } from "../services/firebase";
-import {
-collection,
-getDocs,
-addDoc,
-updateDoc,
-doc,
-query,
-where,
-Timestamp,
-runTransaction,
+import { useNavigate } from "react-router-dom";
+import {collection,getDocs,addDoc,updateDoc,doc,query,where,Timestamp,runTransaction,
 } from "firebase/firestore";
 
 function Instalaciones() {
@@ -19,6 +11,7 @@ const [misReservas, setMisReservas] = useState([]);
 const [expandedId, setExpandedId] = useState(null);
 const [searchTerm, setSearchTerm] = useState("");
 const [tipoFiltro, setTipoFiltro] = useState("todos");
+const navigate = useNavigate();
 const [disponibilidadFiltro, setDisponibilidadFiltro] = useState("todas");
 const [mensaje, setMensaje] = useState(null);
 
@@ -204,7 +197,7 @@ return (
             key={sala.id}
             className="relative group bg-[#F5E9D8] p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.01] cursor-pointer"
         >
-            <div onClick={() => toggleExpand(sala.id)}>
+            <div onClick={() => navigate(`/instalacion/${sala.id}`)}>
             {sala.imagen && (
                 <img
                 src={sala.imagen}
